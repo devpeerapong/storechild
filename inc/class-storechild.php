@@ -38,12 +38,13 @@ if ( ! class_exists( 'Storechild' ) ) {
 			 * Styles
 			 */
 			wp_enqueue_style( 'storefront-style', get_template_directory_uri() . '/style.css', $storefront_version );
+			wp_enqueue_style( 'storechild-style', get_stylesheet_directory_uri() . '/dist/css/app.min.css', $storefront_version );
 			wp_style_add_data( 'storefront-child-style', 'rtl', 'replace' );
 
 			/**
 			 * Javascript
 			 */
-			wp_enqueue_script( 'storechild', get_stylesheet_directory_uri() . '/assets/js/storechild.min.js', array( 'jquery' ), $storechild_version, true );
+			wp_enqueue_script( 'storechild', get_stylesheet_directory_uri() . '/dist/js/app.js', array( 'jquery' ), $storechild_version, true );
 		}
 
 		/**
